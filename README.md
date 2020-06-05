@@ -31,3 +31,31 @@ React JS Fundamental Course by nomadcoders
 * axios
     * npm i axios
 * state 가 필요하다면 class 아니면 function 으로 처리
+
+# Deploy Github page
+* 깃헙에 업로드를 허가해주는 모듈 설치
+    * npm i gh-pages
+    * package-json 라인 추가
+        > "homepage": "https://{github username}.github.io/{github repository name}/"
+    * package.json 에 predeploy, deploy 추가
+        >   "scripts": {
+        >       "start": "react-scripts start",
+        >       "build": "react-scripts build",
+        >       "deploy": "gh-pages -d build",
+        >       "predeploy": "npm run build"
+        >   }
+    * https://jaden-song.github.io/react-movie-app/
+
+# Route
+네비게이션등을 만들 수 있다.
+* npm install react-router-dom
+* Link 를 통한 route 호출
+* HashRouter 아래의 Route 를 통해 페이지 이동
+* HashRouter 는 url 에 # 이 붙어서 이동 (BrowserRouter 는 # 없음)
+    * github pages 에서는 설정이 복잡하여 HashRouter 를 사용함
+
+# 신기한 점
+Router 에서 "~/:id" 로 지정하고, Link pathname 에서 `/movie/${id}` 작성 되어야 함 (저거 따옴표 이름이 머지)
+
+# Redux
+state 를 저장하는 것, 필요하면 반영해보자
