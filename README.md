@@ -36,14 +36,18 @@ React JS Fundamental Course by nomadcoders
 * 깃헙에 업로드를 허가해주는 모듈 설치
     * npm i gh-pages
     * package-json 라인 추가
-        > "homepage": "https://{github username}.github.io/{github repository name}/"
+        ```javascript
+        "homepage": "https://{github username}.github.io/{github repository name}/"
+        ```
     * package.json 에 predeploy, deploy 추가
-        >   "scripts": {
-        >       "start": "react-scripts start",
-        >       "build": "react-scripts build",
-        >       "deploy": "gh-pages -d build",
-        >       "predeploy": "npm run build"
-        >   }
+        ```javascript
+        "scripts": {
+            "start": "react-scripts start",
+            "build": "react-scripts build",
+            "deploy": "gh-pages -d build",
+            "predeploy": "npm run build"
+        }
+        ```
     * https://jaden-song.github.io/react-movie-app/
 
 # Route
@@ -55,7 +59,7 @@ React JS Fundamental Course by nomadcoders
     * github pages 에서는 설정이 복잡하여 HashRouter 를 사용함
 
 # 신기한 점
-Router 에서 "~/:id" 로 지정하고, Link pathname 에서 `/movie/${id}` 작성 되어야 함 (저거 따옴표 이름이 머지)
+Router 에서 "~/:id" 로 지정하고, Link pathname 에서 `` `/movie/${id}` `` 작성 되어야 함 (Grave)
 
 # Redux
 state 를 저장하는 것, 필요하면 반영해보자
